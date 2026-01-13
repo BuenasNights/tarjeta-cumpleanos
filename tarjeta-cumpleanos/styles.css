@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Pixellari';
+    src: url('Pixellari.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Pixellari', sans-serif;
+    background-image: url('fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+}
+
+.titulo {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #5c4f34;
+    animation: fadeIn 2s ease-in;
+}
+
+.dibujo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mensaje {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.boton {
+    background: #ebe979;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Pixellari', sans-serif;
+}
+
+.boton:hover {
+    background: #5e5034;
+}
+
+.mensaje-especial {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #665030;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.mensaje-especial.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 2em;
+    }
+    .container {
+        padding: 15px;
+    }
+}
